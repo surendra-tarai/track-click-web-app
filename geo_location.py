@@ -16,8 +16,8 @@ def get_geolocation(ip_address):
             'country': response.country.name,
             'country_code': response.country.iso_code,
             'city': response.city.name,
-            'latitude': response.location.latitude,
-            'longitude': response.location.longitude,
+            'latitude (approximate)': response.location.latitude,
+            'longitude (approximate)': response.location.longitude,
         }
         
     except Exception as e:
