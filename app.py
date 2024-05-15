@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    target_keys = ('REMOTE_ADDR', 'HTTP_CLIENT_IP', 'HTTP_X_CLIENT_IP')
+    target_keys = ('HTTP_CLIENT_IP', 'HTTP_X_CLIENT_IP', 'HTTP_USER_AGENT')
     param_values = {}
     for key in target_keys:
         param_values[key] = request.environ.get(key)
