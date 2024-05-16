@@ -13,6 +13,17 @@
         th {
             text-align: left;
         }
+        table {
+            width: 50%;
+        }
+
+        td.key {
+            width: 25%;
+        }
+
+        td.value {
+            width: 25%;
+        }
     </style>
 </head>
 
@@ -20,7 +31,7 @@
 
     <h2>IP Details</h2>
 
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Parameter</th>
             <th>Value</th>
@@ -28,7 +39,7 @@
         </tr>
         {% for key, value in param_values.items() %}
         <tr>
-            <td style="width: 30%;">{{ key }}</td>
+            <td>{{ key }}</td>
             <td>{{ value }}</td>
         </tr>
         {% endfor %}
@@ -36,7 +47,7 @@
     </table>
 
     <h2>Browser Details</h2>
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Parameter</th>
             <th>Value</th>
@@ -44,12 +55,12 @@
         </tr>
 
         <tr>
-            <td style="width: 30%;">Browser Name</td>
+            <td>Browser Name</td>
             <td>{{ ua_details.get('browser', {}).get('name')}}</td>
         </tr>
 
         <tr>
-            <td style="width: 30%;">Browser Version</td>
+            <td>Browser Version</td>
             <td>{{ ua_details.get('browser', {}).get('version')}}</td>
         </tr>
     </table>
@@ -60,11 +71,11 @@
             <th>Value</th>
         </tr>
         <tr>
-            <td style="width: 30%;">OS Name</td>
+            <td>OS Name</td>
             <td>{{ ua_details.get('operating_system', {}).get('name')}}</td>
         </tr>
         <tr>
-            <td style="width: 30%;">OS Version</td>
+            <td>OS Version</td>
             <td>{{ ua_details.get('operating_system', {}).get('version')}}</td>
         </tr>
     </table>
@@ -76,26 +87,26 @@
         </tr>
 
         <tr>
-            <td style="width: 30%;">device type</td>
+            <td>device type</td>
             <td>{{ ua_details.get('device', {}).get('type')}}</td>
         </tr>
         <tr>
-            <td style="width: 30%;">device (is mobile?)</td>
+            <td>device (is mobile?)</td>
             <td>{{ ua_details.get('device', {}).get('is_mobile')}}</td>
         </tr>
         <tr>
-            <td style="width: 30%;">device (is tablet?)</td>
+            <td>device (is tablet?)</td>
             <td>{{ ua_details.get('device', {}).get('is_tablet')}}</td>
         </tr>
         <tr>
-            <td style="width: 30%;">device (is pc?)</td>
+            <td>device (is pc?)</td>
             <td>{{ ua_details.get('device', {}).get('is_pc')}}</td>
         </tr>
     </table>
 
     <h2>Location Details</h2>
 
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Parameter</th>
             <th>Value</th>
@@ -103,7 +114,7 @@
         </tr>
         {% for key, value in geo_details.items() %}
         <tr>
-            <td style="width: 30%;">{{ key }}</td>
+            <td>{{ key }}</td>
             <td>{{ value }}</td>
         </tr>
         {% endfor %}
