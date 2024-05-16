@@ -34,6 +34,11 @@
             width: 100%;
         }
 
+        .header {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         .col {
             display: flex;
             justify-content: center;
@@ -186,7 +191,7 @@
     <div class="wrapper">
         <div class="receipt" id="download">
             <section>
-                <div class="row" style="font-weight: 600">
+                <div class="row header" style="font-weight: 600">
                     <div class="col list__name">IP Details</div>
                     <div class="col list__price">Value</div>
                 </div>
@@ -203,7 +208,7 @@
             </section>
             <br>
             <section>
-                <div class="row" style="font-weight: 600">
+                <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Browser Details</div>
                     <div class="col list__price">Value</div>
                 </div>
@@ -227,7 +232,7 @@
 
             <br>
             <section>
-                <div class="row" style="font-weight: 600">
+                <div class="row header" style="font-weight: 600">
                     <div class="col list__name">OS Details</div>
                     <div class="col list__price">Value</div>
                 </div>
@@ -251,7 +256,7 @@
 
             <br>
             <section>
-                <div class="row" style="font-weight: 600">
+                <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Device Details</div>
                     <div class="col list__price">Value</div>
                 </div>
@@ -271,6 +276,23 @@
                 </div>
                 <hr class="divider no-gutter" />
 
+            </section>
+            <br>
+            <section>
+                <div class="row header" style="font-weight: 600">
+                    <div class="col list__name">Location Details</div>
+                    <div class="col list__price">Value</div>
+                </div>
+                <hr class="divider" />
+
+                {% for key, value in geo_details.items() %}
+                <div class="row">
+                    <div class="col list__name">{{key}}</div>
+
+                    <div class="col list__price">{{value}}</div>
+                </div>
+                <hr class="divider no-gutter" />
+                {% endfor %}
             </section>
         </div>
     </div>
