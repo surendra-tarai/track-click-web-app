@@ -13,6 +13,10 @@ def home():
 
     ua_string = request.environ.get('HTTP_USER_AGENT')
     ua_details = get_user_agenet_details(ua_string)
+    other_details = {}
+    
+    other_details['Referrer'] = request.referrer or 'Direct'
+    other_details['UA String'] = ua_string
 
     device = ua_details.get('device', {})
     device['device_size'] = 'Unknown'
@@ -32,7 +36,7 @@ def home():
     ip_v4_address = ipv4_address or '127.0.0.1'
     geo_details = get_geolocation(ip_v4_address)
 
-    return render_template('click-details-2.html', param_values=param_values, ua_details=ua_details, geo_details=geo_details)
+    return render_template('click-details-2.html', param_values=param_values, ua_details=ua_details, geo_details=geo_details, other_details=other_details)
 
 
 if __name__ == '__main__':

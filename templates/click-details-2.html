@@ -294,6 +294,23 @@
                 <hr class="divider no-gutter" />
                 {% endfor %}
             </section>
+            <br>
+            <section>
+                <div class="row header" style="font-weight: 600">
+                    <div class="col list__name">Other Details</div>
+                    <div class="col list__price">Value</div>
+                </div>
+                <hr class="divider" />
+
+                {% for key, value in other_details.items() %}
+                <div class="row">
+                    <div class="col list__name">{{key}}</div>
+
+                    <div class="col list__price">{{value}}</div>
+                </div>
+                <hr class="divider no-gutter" />
+                {% endfor %}
+            </section>
         </div>
     </div>
 </body>
