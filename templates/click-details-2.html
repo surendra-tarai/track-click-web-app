@@ -193,9 +193,9 @@
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">IP Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
-                <hr class="divider" />
+                <hr class="divider no-gutter" />
 
                 {% for key, value in param_values.items() %}
                 <div class="row">
@@ -203,14 +203,14 @@
 
                     <div class="col list__price">{{value}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
                 {% endfor %}
             </section>
             <br>
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Browser Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
                 <hr class="divider" />
 
@@ -219,14 +219,14 @@
 
                     <div class="col list__price">{{ ua_details.get('browser', {}).get('name')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
                 <div class="row">
                     <div class="col list__name">Browser Version</div>
 
                     <div class="col list__price">{{ ua_details.get('browser', {}).get('version')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
             </section>
 
@@ -234,23 +234,23 @@
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">OS Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
-                <hr class="divider" />
+                <hr class="divider no-gutter" />
 
                 <div class="row">
                     <div class="col list__name">OS Name</div>
 
                     <div class="col list__price">{{ ua_details.get('operating_system', {}).get('name')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
                 <div class="row">
                     <div class="col list__name">OS Version</div>
 
                     <div class="col list__price">{{ ua_details.get('operating_system', {}).get('version')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
             </section>
 
@@ -258,32 +258,32 @@
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Device Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
-                <hr class="divider" />
+                <hr class="divider no-gutter" />
 
                 <div class="row">
                     <div class="col list__name">Device Type</div>
 
-                    <div class="col list__price">{{ ua_details.get('device', {}).get('type')}}</div>
+                    <div class="col list__price">{{ ua_details.get('device', {}).get('device_type')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
                 <div class="row">
-                    <div class="col list__name">Device Size</div>
+                    <div class="col list__name">Device Type Details</div>
 
-                    <div class="col list__price">{{ua_details.get('device', {}).get('device_size')}}</div>
+                    <div class="col list__price">{{ua_details.get('device', {}).get('type')}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
 
             </section>
             <br>
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Location Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
-                <hr class="divider" />
+                <hr class="divider no-gutter" />
 
                 {% for key, value in geo_details.items() %}
                 <div class="row">
@@ -291,16 +291,16 @@
 
                     <div class="col list__price">{{value}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
                 {% endfor %}
             </section>
             <br>
             <section>
                 <div class="row header" style="font-weight: 600">
                     <div class="col list__name">Other Details</div>
-                    <div class="col list__price">Value</div>
+                    <!-- <div class="col list__price">Value</div> -->
                 </div>
-                <hr class="divider" />
+                <hr class="divider no-gutter" />
 
                 {% for key, value in other_details.items() %}
                 <div class="row">
@@ -308,7 +308,7 @@
 
                     <div class="col list__price">{{value}}</div>
                 </div>
-                <hr class="divider no-gutter" />
+                <hr class="divider" />
                 {% endfor %}
             </section>
         </div>
