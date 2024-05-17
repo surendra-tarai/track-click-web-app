@@ -28,10 +28,10 @@ def home():
         device['device_type'] = 'Computer'
     ua_details['device'] = device
     print(ua_details)
-    ipv4_address = param_values.get('HTTP_CLIENT_IP')
+    ipv4_address = param_values.get('IPv4')
     if ipv4_address:
         ipv4_address = ipv4_address.split(':')[0]
-        param_values['HTTP_CLIENT_IP'] = ipv4_address
+        param_values['IPv4'] = ipv4_address
 
     ip_v4_address = ipv4_address or '127.0.0.1'
     geo_details = get_geolocation(ip_v4_address)
